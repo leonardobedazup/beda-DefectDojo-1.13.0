@@ -10,5 +10,5 @@ jobs:
       uses: actions/checkout@v2
     - name: Running Horus Security
         run: |
-          curl -fsSL https://horusec.io/bin/install.sh | bash
-          horusec start -p ./ -G "true"  -n "${GITHUB_REPOSITORY}_${GITHUB_REF##*/}"
+        curl -fsSL https://horusec.io/bin/install.sh | bash
+        horusec start -p ./ -G "true"  -n "${GITHUB_REPOSITORY}_${GITHUB_REF##*/}"
