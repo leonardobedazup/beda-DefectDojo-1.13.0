@@ -11,4 +11,4 @@ jobs:
     - name: Running Horus Security
       run: |
         curl -fsSL https://horusec.io/bin/install.sh | bash
-        horusec start -p ./ -G "true"  -n "${GITHUB_REPOSITORY}_${GITHUB_REF##*/}" -o json
+        horusec start -p ./ --output-format json -G "true" -n "${GITHUB_REPOSITORY}_${GITHUB_REF##*/}"
